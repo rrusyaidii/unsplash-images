@@ -14,24 +14,19 @@ html {
 
 :root {
   /* colors */
-  --primary-100: #e2e0ff;
   --primary-200: #c1beff;
   --primary-300: #a29dff;
   --primary-400: #837dff;
   --primary-500: #645cff;
   --primary-600: #504acc;
-  --primary-700: #3c3799;
-  --primary-800: #282566;
-  --primary-900: #141233;
 
   /* grey */
 
+  --grey-200: #e2e8f0;
+  --grey-300: #cbd5e1;
   --grey-400: #94a3b8;
   --grey-500: #64748b;
   --grey-600: #475569;
-  --grey-700: #334155;
-  --grey-800: #1e293b;
-  --grey-900: #0f172a;
   /* rest of the colors */
   --black: #222;
   --white: #fff;
@@ -47,14 +42,7 @@ html {
   --max-width: 1120px;
   --fixed-width: 600px;
   --view-width: 90vw;
-  /* box shadow*/
-  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
   /* dark mode setup */
   --dark-mode-bg-color: #333;
   --dark-mode-text-color: #f0f0f0;
@@ -88,11 +76,7 @@ body {
 p {
   margin: 0;
 }
-h1,
-h2,
-h3,
-h4,
-h5 {
+h1 {
   margin: 0;
   font-family: var(--headingFont);
   font-weight: 400;
@@ -103,11 +87,6 @@ h5 {
 
 h1 {
   font-size: clamp(2rem, 5vw, 5rem); /* Large heading */
-}
-
-small,
-.text-small {
-  font-size: var(--small-text);
 }
 
 a {
@@ -170,28 +149,30 @@ ul {
   border: 1px solid var(--grey-200);
 }
 
-/* alert */
-
-@keyframes spinner {
-  to {
-    transform: rotate(360deg);
-  }
+.form-row {
+  margin-bottom: 1rem;
 }
 
-.loading {
-  width: 6rem;
-  height: 6rem;
-  border: 5px solid var(--grey-400);
-  border-radius: 50%;
-  border-top-color: var(--primary-500);
-  animation: spinner 0.6s linear infinite;
-  margin: 0 auto;
+.form-textarea {
+  height: 7rem;
+}
+::placeholder {
+  font-family: inherit;
+  color: var(--grey-400);
 }
 
 /* title */
 
 .title {
   text-align: center;
+}
+
+.title-underline {
+  background: var(--primary-500);
+  width: 7rem;
+  height: 0.25rem;
+  margin: 0 auto;
+  margin-top: 1rem;
 }
 
 /* 
